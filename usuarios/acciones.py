@@ -63,11 +63,11 @@ class Acciones:
             self.proximasAcciones(usuario)
 
         elif accion =="mostrar":
-            print("MOSTRAR")
+            hazEl.mostrar(usuario)
             self.proximasAcciones(usuario)
 
         elif accion == "eliminar":
-            print("ELIMINAR")
+            hazEl.borrar(usuario)
             self.proximasAcciones(usuario)
 
         elif accion=="salir":

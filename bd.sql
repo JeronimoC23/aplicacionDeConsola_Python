@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS app_python;
-use app_python;
+CREATE DATABASE IF NOT EXISTS app_consola;
+use app_consola;
 
 CREATE TABLE usuarios(
 id          int(25)     auto_increment not null,

@@ -21,9 +21,16 @@ class Nota:
 
         return[cursor.rowcount, self]
         
-      def listar(self):
-            sql ="SELECT * FROM notas WHERE usuario_id" + str(self.usuario_id)
-        cursor.execute (sql)
+    def listar(self):
+        sql ="SELECT * FROM notas WHERE usuario_id = {self.usuario_id}"
+        cursor.execute(sql)
         
         result = cursor.fetchall()
         return result
+
+    def eliminar(self, titulo):
+        sql:f"DELETE FROM notas WHERE usuario_id = {self.usuario_id} AND titulo LIKE '%{self.titulo}%'"
+        cursor.execute(sql)
+        database.commit()
+
+        return [cursor.rowcount, self]
